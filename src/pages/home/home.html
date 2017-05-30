@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <emoji-picker (selectedImojiPickerIten)="emoji($event)"></emoji-picker>
+  <div class="emoji-item" *ngIf="selectedImojiPickerIten" >
+    <h4>Your joice</h4>
+    {{selectedImojiPickerIten.emoji}}
+    <h4>{{selectedImojiPickerIten.description}}</h4>
+  </div>
 </ion-content>

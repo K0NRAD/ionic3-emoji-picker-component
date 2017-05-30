@@ -1,0 +1,11 @@
+<div class="emoji-picker">
+  <div class="emoji-picker-items">
+    <ion-slides pager>
+      <ion-slide *ngFor="let imojiPickerItemGroup of imojiPickerItemGroups">
+        <span class="emoji-picker-item" (click)="publishSelectedEmoji(imojiPickerIten)" *ngFor="let imojiPickerIten of imojiPickerItemGroup">
+          {{imojiPickerIten.emoji}}
+        </span>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>
